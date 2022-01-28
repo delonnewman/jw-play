@@ -3,8 +3,8 @@ const { BrowserWindow, screen, ipcMain } = require("electron");
 const Window = require("./Window");
 
 class MainWindow extends Window {
-  constructor(app) {
-    super({ app });
+  constructor(app, options) {
+    super({ app, transparent: true, frame: false });
     this.resize(800, 450);
 
     this.loadAppFile("main.html");
